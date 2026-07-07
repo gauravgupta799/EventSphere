@@ -8,7 +8,6 @@ import User from "../models/User.js";
 import OTP from "../models/OTP.js";
 
 
-
 const generateToken = (userId, userRole)=>{
     return jwt.sign({ userId, userRole}, process.env.JWT_SECRET, { expiresIn: '7d' })
 }

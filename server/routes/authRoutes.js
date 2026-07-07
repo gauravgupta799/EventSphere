@@ -1,14 +1,13 @@
 import express from "express";
 import { registerUser, loginUser, verifyOTP } from "../controllers/authController.js";
+import { isAdmin, verifyToken } from "../middleware/authProtector.js";
 
 const router = express.Router();
 
-// Publis ROutes
+// Public Routes
 router.post("/register", registerUser);
 router.post("/login", loginUser);
 router.post("/verify-otp", verifyOTP);
-
-// Protected Routes
 
 
 export default router;

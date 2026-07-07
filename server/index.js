@@ -6,6 +6,7 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import nodemailer from "nodemailer";
 import authRoutes from "./routes/authRoutes.js";
+import eventsRoutes from "./routes/eventsRoutes.js"
 
 
 dotenv.config();
@@ -19,6 +20,7 @@ const PORT = process.env.PORT || 5000;
 
 // Routes
 app.use("/api/auth", authRoutes);
+app.use("/api/events", eventsRoutes);
 
 
 // Database Connection
